@@ -1,0 +1,12 @@
+Hotkeys for me :)
+
+Win-Q = Terminal
+Win-W = Web browser
+Win-E = Editor
+
+
+Pressing the hotkey will focus on the application window:
+- if the application is running it is made the focused one by raising it
+- otherwise the application is started
+
+When there is more matching windows, a menu is displayed to choose from.

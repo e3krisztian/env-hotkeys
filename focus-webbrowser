@@ -1,0 +1,2 @@
+#!/bin/bash
+exec raise-or-exec Navigator.Firefox firefox

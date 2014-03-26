@@ -1,0 +1,2 @@
+#!/bin/bash
+exec raise-or-exec sublime_text.Sublime_text sublime_text
