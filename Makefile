@@ -1,18 +1,11 @@
-REQUIRED_PACKAGES=wmctrl ratmenu python-daemon
-OPTIONAL_PACKAGES=xbindkeys xbindkeys-config
+REQUIRED_PACKAGES=wmctrl ratmenu python-daemon xbindkeys xbindkeys-config
 
 LN=ln --symbolic --force --verbose
 
-.PHONY: check install install-optional
+.PHONY: check install
 
 check:
-	# *** Check required packages ***
 	dpkg --status $(REQUIRED_PACKAGES) 2>&1 | \
-	  egrep '^(Package|Status)' | \
-	  sed -e 's/^P/\nP/' -e 's/^S/  S/'; echo
-
-	# *** Check optional packages ***
-	dpkg --status $(OPTIONAL_PACKAGES) 2>&1 | \
 	  egrep '^(Package|Status)' | \
 	  sed -e 's/^P/\nP/' -e 's/^S/  S/'; echo
 
@@ -21,6 +14,3 @@ install:
 	$(LN) --backup=existing $(PWD)/dot.xbindkeysrc ~/.xbindkeysrc
 	$(LN) $(PWD)/focus-* ~/bin
 	$(LN) $(PWD)/raise-or-exec.py ~/bin/raise-or-exec
-
-install-optional:
-	sudo apt-get install $(OPTIONAL_PACKAGES)
