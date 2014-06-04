@@ -1,2 +1,2 @@
 #!/bin/bash
-exec raise-or-exec Navigator.Firefox firefox
+exec raise-or-exec chromium-browser.Chromium-browser x-www-browser
