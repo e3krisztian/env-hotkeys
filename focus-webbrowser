@@ -1,2 +1,2 @@
 #!/bin/bash
-exec raise-or-exec chromium-browser.Chromium-browser x-www-browser
+exec raise-or-exec Chromium-browser.Chromium-browser x-www-browser
